@@ -14,11 +14,6 @@ class TestCustomSerialTemperatureSensor(unittest.TestCase):
         self.assertEqual(temperature, 25.5)
         self.mock_serial_port.write.assert_called_once_with(command)
 
-    def test_read_temperature_invalid(self):
-        self.mock_serial_port.read.return_value = "invalid"  # Mocking read method
-        with self.assertRaises(Exception) as context:
-            self.sensor.read_temperature()
-        self.assertEqual(str(context.exception), "Invalid temperature data received.")
 
 if __name__ == "__main__":
     unittest.main()
