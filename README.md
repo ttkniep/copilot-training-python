@@ -1,24 +1,35 @@
-# Copilot training sample code
+# Copilot Training Sample Code (Python Version)
 
 ## Prerequisites
-- Latest version of VS Code and the following extensions (alternatively, you can use CLion but not all features are available):
-  - C/C++
-  - C/C++ Extensions Pack
-  - CMake Tools
-  - GitHub Copilot
-  - GitHub Copilot Chat
-  - PlantUML (jebbs) -- optional, just for UML diagrams
-- C++ Compiler (e.g. Clang, GCC)
-  - Windows: If you don't already have a working compiler on your machine, I recommend to install the Microsoft Visual C++ (MSVC) 
-    as documented under step 3 of [`these instructions`](https://code.visualstudio.com/docs/cpp/config-msvc)
-    - **Note:** As mentioned in the instructions, you should start the "Developer command prompt for VS" and start VS Code from there to ensure that the environment variables are set correctly.  
-  - MacOS: `brew install clang`
-- CMake
-  - Windows: [`Download and run the Windows x64 Installer`](https://cmake.org/download/)
-    - Select "Add CMake to system PATH for all users"
-    - Confirm the installation: `cmake --version`
-  - MacOS: `brew install cmake`
-- Ninja
-  - MacOS: `brew install ninja`
-  - Windows: Often, it's already there. If not, [`download and install Ninja`](https://github.com/ninja-build/ninja/releases)
-    - Confirm the installation: `ninja --version`
+- Python 3.8 or later
+- Recommended: Virtual environment (e.g., `venv` or `virtualenv`)
+
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd copilot-training-python
+   ```
+
+2. Create and activate a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the tests:
+   ```bash
+   python -m unittest discover tests
+   ```
+
+## Project Structure
+- `src/`: Contains the implementation of the temperature sensor and serial port.
+- `tests/`: Contains unit tests for the project.
+
+## Running the Application
+To use the `CustomSerialTemperatureSensor`, import it in your Python script and provide a `SerialPort` instance.
