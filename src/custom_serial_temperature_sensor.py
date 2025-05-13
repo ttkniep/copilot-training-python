@@ -1,7 +1,6 @@
 class CustomSerialTemperatureSensor:
     COMMAND_GET_TEMPERATURE_CELSIUS = "GTC\n"
     COMMAND_GET_TEMPERATURE_FAHRENHEIT = "GTF\n"
-    COMMAND_GET_HUMIDITY = "GHU\n"
     COMMAND_GET_DEVICE_ID = "GID\n"
 
     def __init__(self, serial_port):
