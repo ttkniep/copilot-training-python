@@ -3,6 +3,11 @@
 ## Prerequisites
 - Python 3.8 or later
 - Recommended: Virtual environment (e.g., `venv` or `virtualenv`)
+- Latest version of VS Code and the following extensions (alternatively, you can use Jetbrains IDEs, but not all features might be available):
+  - Python (Microsoft)
+  - GitHub Copilot
+  - GitHub Copilot Chat
+  - PlantUML (jebbs) -- optional, just for UML diagrams
 
 ## Setup Instructions
 1. Clone the repository:
@@ -30,6 +35,3 @@
 ## Project Structure
 - `src/`: Contains the implementation of the temperature sensor and serial port.
 - `tests/`: Contains unit tests for the project.
-
-## Running the Application
-To use the `CustomSerialTemperatureSensor`, import it in your Python script and provide a `SerialPort` instance.
